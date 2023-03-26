@@ -15,6 +15,68 @@ API level permission provides an additional layer of security by allowing admini
 
 Detailed logs are also maintained for auditing and error tracking, allowing administrators to track user activity and troubleshoot any issues that may arise.
 
+## Usage
+
+The Online voting system project provides the following endpoints:
+
+### Authentication
+- GET /invalidate-token: Expire token of a candidates in the election system.
+- POST /login: Validate a candidate to the election system.
+
+### User
+- GET /user: Retrieves a list of all users in the system.
+- GET /user/{id}: Retrieves a specific user from the system by ID.
+- POST /user: Adds a new user to the system.
+- PUT /user/{id}: Updates an existing user in the system by ID.
+- PUT /change-password : Update user password.
+- DELETE /user/{id}: Deletes a specific user from the system by ID.
+
+### User
+- GET /user: Retrieves a list of all users in the system.
+- GET /user/{id}: Retrieves a specific user from the system by ID.
+- POST /user: Adds a new user to the system.
+- PUT /user/{id}: Updates an existing user in the system by ID.
+- PUT /change-password : Update user password.
+- DELETE /user/{id}: Deletes a specific user from the system by ID.
+- DELETE /user: Deletes all user from the election system.
+
+### Votes
+- GET /vote: Retrieves a list of all votes made by users in the library system.
+- GET /vote/{id}: Retrieves a specific vote from the library system by ID.
+- POST /vote: Adds a new vote to the library system.
+
+### Roles
+- GET /role: Retrieves a list of all roles defined in the library system.
+- GET /role/{id}: Retrieves a specific role from the library system by ID.
+- POST /role: Adds a new role to the library system.
+- PUT /role/{id}: Updates an existing role in the library system by ID.
+- DELETE /role/{id}: Deletes a specific role from the library system by ID.
+- DELETE /role: Deletes all role from the election system.
+
+### Privileges
+- GET /privilege: Retrieves a list of all privileges defined in the library system.
+- GET /privilege/{id}: Retrieves a specific privilege from the library system by ID.
+- POST /privilege: Adds a new privilege to the library system.
+- PUT /privilege/{id}: Updates an existing privilege in the library system by ID.
+- DELETE /privilege/{id}: Deletes a specific privilege from the library system by ID.
+- DELETE /privilege: Deletes all privilege from the election system.
+
+### Candidates
+- GET /candidate: Retrieves a list of all candidates in the election system.
+- GET /candidate/{id}: Retrieves a specific candidate from the election system by ID.
+- GET /candidate/approved: Retrieve a list of all approved candidate from the election system.
+- GET /candidate/pending: Retrieve a list of allpending candidate from the election system.
+- GET /candidate/denied: Retrieve a list of all pending candidate from the election system.
+- POST /registration: Adds a new candidate to the election system.
+- PUT /candidate/{id}: Updates an existing candidate in the election system by ID.
+- PUT /candidate/approved/{id}: Updates an existing pending candidate to approved in the election system by ID.
+- PUT /candidate/denied/{id}: Updates an existing pending candidate to denied in the election system by ID.
+- DELETE /candidate/{id}: Deletes a specific candidate from the election system by ID.
+- DELETE /candidate: Deletes all candidate from the election system.
+
+### Blacklist Token
+- DELETE /black-listed-token: Deletes all black listed token from the election system.
+
 ## Getting Started
 
 To use the Online Voting System, simply clone the repository and follow the instructions in the README file. Make sure to configure the necessary roles and permissions for your organization's needs.
