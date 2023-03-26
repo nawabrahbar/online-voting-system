@@ -95,3 +95,9 @@ We welcome contributions to the Library Management project! To contribute:
 - Make your changes and commit them using <b>git commit -m "Your commit message"</b>
 - Push your changes to your forked repository
 
+## Acknowledgements
+
+- Spring Boot
+- Apache Tomcat
+- Java 8 or higher
+- MongoDB
