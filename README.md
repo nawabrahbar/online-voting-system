@@ -15,9 +15,17 @@ API level permission provides an additional layer of security by allowing admini
 
 Detailed logs are also maintained for auditing and error tracking, allowing administrators to track user activity and troubleshoot any issues that may arise.
 
+## Getting Started
+
+- Clone the repository to your local machine using git clone <a href="https://github.com/nawabrahbar/library-management.git">Onine voting system</a>
+- Navigate to the project directory using <b>cd library-management</b>
+- Build the project using <b>mvn clean install</b>
+- Start the server using <b>mvn spring-boot:run</b>
+- Open a web browser and navigate to [http://localhost:8080/api/v1](http://localhost:8080/api/v1) to view the application
+
 ## Usage
 
-The Online voting system project provides the following endpoints: http://localhost:8080/api/v1
+The Online voting system project provides the following endpoints:
 
 ### Authentication
 - GET /invalidate-token: Expire token of a candidates in the election system.
@@ -77,6 +85,13 @@ The Online voting system project provides the following endpoints: http://localh
 ### Blacklist Token
 - DELETE /black-listed-token: Deletes all black listed token from the election system.
 
-## Getting Started
+##Contributing
 
-To use the Online Voting System, simply clone the repository and follow the instructions in the README file. Make sure to configure the necessary roles and permissions for your organization's needs.
+We welcome contributions to the Library Management project! To contribute:
+
+- <b>Fork</b> the repository to your own GitHub account.
+- Clone the repository to your local machine using git clone <a href="https://github.com/nawabrahbar/library-management.git">Onine voting system</a>
+- Create a new branch for your changes using <b>git checkout -b feature/your-feature-name</b>
+- Make your changes and commit them using <b>git commit -m "Your commit message"</b>
+- Push your changes to your forked repository
+
