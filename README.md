@@ -17,7 +17,7 @@ Detailed logs are also maintained for auditing and error tracking, allowing admi
 
 ## Getting Started
 
-- Clone the repository to your local machine using git clone <b>https://github.com/nawabrahbar/library-management.git</b>
+- Clone the repository to your local machine using <b>git clone https://github.com/nawabrahbar/library-management.git</b>
 - Navigate to the project directory using <b>cd library-management</b>
 - Build the project using <b>mvn clean install</b>
 - Start the server using <b>mvn spring-boot:run</b>
@@ -90,7 +90,7 @@ The Online voting system project provides the following endpoints:
 We welcome contributions to the Library Management project! To contribute:
 
 - <b>Fork</b> the repository to your own GitHub account.
-- Clone the repository to your local machine using git clone <b>https://github.com/nawabrahbar/library-management.git</b>
+- Clone the repository to your local machine using <b>git clone https://github.com/nawabrahbar/library-management.git</b>
 - Create a new branch for your changes using <b>git checkout -b feature/your-feature-name</b>
 - Make your changes and commit them using <b>git commit -m "Your commit message"</b>
 - Push your changes to your forked repository
