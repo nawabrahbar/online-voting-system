@@ -17,7 +17,7 @@ Detailed logs are also maintained for auditing and error tracking, allowing admi
 
 ## Usage
 
-The Online voting system project provides the following endpoints:
+The Online voting system project provides the following endpoints: http://localhost:8080/api/v1
 
 ### Authentication
 - GET /invalidate-token: Expire token of a candidates in the election system.
