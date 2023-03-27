@@ -29,6 +29,6 @@ jobs:
       run: mvn -B package --file OnlineVotingSystem/pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml -DpomFile=OnlineVotingSystem/pom.xml -Dfile=OnlineVotingSystem/target/OnlineVotingSystem.jar
+      run: mvn deploy -DskipTests=true --settings $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
