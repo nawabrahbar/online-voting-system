@@ -72,17 +72,18 @@ public class JwtUtil {
 	}
 
 	public String generateToken(User user) {
+
 		Map<String, Object> claims = new HashMap<>();
 		Set<String> userPrivileges = new HashSet<>();
 
-		for (int i = 0; i < user.getPermissions().length; i++) {
+		for (int i = 0; i < user.getPermissions().length; i++)
 			userPrivileges.add(user.getPermissions()[i]);
-		}
 
 		userPrivileges.add(mongoTemplate
 				.findOne(new Query().addCriteria(Criteria.where("_id").is(user.getRole())), Role.class).getName());
 
 		claims.put("AUTHORITIES_KEY", userPrivileges.toArray());
+
 		return createToken(claims, user.getId());
 	}
 
@@ -94,12 +95,10 @@ public class JwtUtil {
 	}
 
 	public boolean validateToken(String token) {
-		boolean isExpired = isTokenExpired(token);
-		if (!isExpired) {
-			return true;
-		} else {
-			return false;
-		}
-	}
 
+		if (!isTokenExpired(token))
+			return true;
+		else
+			return false;
+	}
 }

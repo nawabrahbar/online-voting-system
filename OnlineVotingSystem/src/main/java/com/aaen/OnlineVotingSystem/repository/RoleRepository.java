@@ -11,5 +11,4 @@ import com.aaen.OnlineVotingSystem.model.Role;
 public interface RoleRepository extends MongoRepository<Role, String> {
 
 	public Optional<Role> findByName(String roleName);
-
 }

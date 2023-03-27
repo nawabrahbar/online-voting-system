@@ -49,10 +49,8 @@ public class BlacklistedJwtTokenServiceImpl implements BlacklistedJwtTokenServic
 
 		Optional<BlacklistedJwtToken> optional = repository.findByToken(token);
 
-		if (optional.isPresent()) {
-
+		if (optional.isPresent())
 			return optional.get();
-		}
 
 		return null;
 	}

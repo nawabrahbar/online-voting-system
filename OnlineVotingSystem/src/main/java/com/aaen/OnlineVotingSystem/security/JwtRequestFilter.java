@@ -44,13 +44,17 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 		String token = null;
 
 		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+
 			token = authorizationHeader.substring(7);
-			if (!token.equals("null"))
+
+			if (!token.equals("null")) {
+
 				try {
 					userId = jwtUtil.extractId(token);
 				} catch (Exception e) {
 					log.info("JWT Token Expired, Please login again");
 				}
+			}
 		}
 
 		if (userId != null && SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -69,6 +73,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 				}
 
 			} else {
+
 				Map<String, Object> errorDetails = new HashMap<>();
 				errorDetails.put("message", "Token expire");
 				log.info("JWT Token Expired" + errorDetails);
@@ -76,5 +81,4 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 		}
 		chain.doFilter(request, response);
 	}
-
 }

@@ -23,5 +23,4 @@ public interface PrivilegeService {
 	public HttpStatus deletePrivileges();
 
 	public String updatePrivilege(PrivilegeRequestResponse privilege);
-
 }

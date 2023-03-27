@@ -9,5 +9,4 @@ import com.aaen.OnlineVotingSystem.model.Vote;
 public interface VoteRepository extends MongoRepository<Vote, String> {
 
 	public Boolean existsByVoterIdNumber(String voterIdNumber);
-
 }

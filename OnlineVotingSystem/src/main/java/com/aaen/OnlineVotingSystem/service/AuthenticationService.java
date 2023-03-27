@@ -16,5 +16,4 @@ public interface AuthenticationService {
 			throws BadCredentialsException, RecordNotFoundException;
 
 	public String invalidateToken(String token);
-
 }

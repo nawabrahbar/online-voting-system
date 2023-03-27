@@ -25,5 +25,4 @@ public interface RoleService {
 	public HttpStatus deleteRoles();
 
 	public HttpStatus update(Role role);
-
 }

@@ -1,8 +1,9 @@
 package com.aaen.OnlineVotingSystem.model;
 
+import org.bson.types.Binary;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.bson.types.Binary;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

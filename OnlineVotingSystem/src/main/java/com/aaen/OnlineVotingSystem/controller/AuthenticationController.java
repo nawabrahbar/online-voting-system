@@ -1,5 +1,7 @@
 package com.aaen.OnlineVotingSystem.controller;
 
+import java.util.Objects;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +22,6 @@ import com.aaen.OnlineVotingSystem.service.AuthenticationService;
 @RequestMapping(path = { "/api/v1" })
 public class AuthenticationController {
 
-	@SuppressWarnings("unused")
-	private static final Logger LOGGER = LoggerFactory.getLogger(AuthenticationController.class.getName());
-
 	@Autowired
 	private AuthenticationService authenticationService;
 
@@ -30,21 +29,31 @@ public class AuthenticationController {
 	public ResponseEntity<?> validateUser(@RequestBody Authentication authentication) {
 
 		try {
-			if (authentication.getEmail() != null)
+
+			if (Objects.nonNull(authentication.getEmail()))
 				authentication.setEmail(authentication.getEmail().toLowerCase());
+
 			return authenticationService.validateUser(authentication);
+
 		} catch (BadCredentialsException badCredentialsException) {
+
 			return new ResponseEntity<>("Invalid email or password", HttpStatus.UNAUTHORIZED);
+
 		} catch (RecordNotFoundException recordNotFoundException) {
+
 			return new ResponseEntity<>("Invalid email id", HttpStatus.NOT_FOUND);
 		}
 	}
 
 	@RequestMapping(value = "/invalidate-token", method = RequestMethod.GET)
 	public ResponseEntity<?> invalidateToken(@RequestHeader(name = "Authorization") String token) {
+
 		String response = authenticationService.invalidateToken(token);
-		if (response != null) {
+
+		if (Objects.nonNull(response)) {
+
 			return ResponseEntity.status(HttpStatus.OK).body(response);
+
 		} else {
 			throw new RecordNotFoundException("Not added.");
 		}

@@ -38,34 +38,43 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
 	@Override
 	@Bean
 	public AuthenticationManager authenticationManagerBean() throws Exception {
+
 		return super.authenticationManagerBean();
 	}
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
 		auth.userDetailsService(authenticationServiceImpl).passwordEncoder(passwordEncoder());
 	}
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {
+
 		return new BCryptPasswordEncoder();
 	}
 
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
+
 		httpSecurity.cors().disable();
+
 		httpSecurity.csrf().disable().exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-				.authorizeRequests().antMatchers("/api/v1/login", "/api/v1/registration").permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
-				.permitAll().anyRequest().authenticated().and().exceptionHandling().and().sessionManagement()
-				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+				.authorizeRequests().antMatchers("/api/v1/login", "/api/v1/registration").permitAll()
+				.antMatchers(HttpMethod.OPTIONS, "/**").permitAll().anyRequest().authenticated().and()
+				.exceptionHandling().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
 		httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 	}
 
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
+
 		return new WebMvcConfigurer() {
+
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
+
 				registry.addMapping("/*").allowedHeaders("*").allowedOriginPatterns("*").allowedMethods("*")
 						.allowCredentials(true);
 			}
@@ -74,6 +83,7 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
 
 	@Bean
 	public RestTemplate restTemplate() {
+
 		return new RestTemplate();
 	}
 

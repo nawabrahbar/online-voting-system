@@ -24,5 +24,4 @@ public class JsonResponseUtil {
 		jsonObject.put("permissions", permissions.get("permissions"));
 		return jsonObject.toString();
 	}
-
 }

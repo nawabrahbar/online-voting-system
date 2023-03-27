@@ -11,5 +11,4 @@ public class Validation {
 
 		return Pattern.compile(Regex.PASSWORD_VALIDATION).matcher(password).matches();
 	}
-
 }

@@ -14,8 +14,8 @@ import com.aaen.OnlineVotingSystem.model.VoteCount;
 public interface VoteService {
 
 	public HttpStatus create(Vote vote, String userId);
-	
+
 	public List<Vote> getVotes();
-	
+
 	public List<VoteCount> getResult();
 }

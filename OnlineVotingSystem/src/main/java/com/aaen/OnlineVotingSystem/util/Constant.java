@@ -52,11 +52,10 @@ public class Constant {
 	public static final String APPROVED = "approved";
 	public static final String DENIED = "denied";
 	public static final String STATE = "state";
-	
+
 	/*
 	 * Vote
 	 */
 	public static final String CONSTITUENCY = "constituency";
 	public static final String PARTY = "party";
-	
 }

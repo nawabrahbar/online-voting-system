@@ -95,20 +95,14 @@ public class CandidateController {
 
 	@PutMapping("/candidate")
 	@PreAuthorize("hasAuthority('candidates.update')")
-	public ResponseEntity<?> updateCandidates(
-			@RequestParam("id") String id,
-			@Nullable @RequestParam("email") String email,
-			@Nullable @RequestParam("phoneNumber") Long phoneNumber, 
-			@Nullable @RequestParam("password") String password,
-			@Nullable @RequestParam("name") String name,
-			@Nullable @RequestParam("role") String role,
-			@Nullable @RequestParam("party") String party, 
+	public ResponseEntity<?> updateCandidates(@RequestParam("id") String id,
+			@Nullable @RequestParam("email") String email, @Nullable @RequestParam("phoneNumber") Long phoneNumber,
+			@Nullable @RequestParam("password") String password, @Nullable @RequestParam("name") String name,
+			@Nullable @RequestParam("role") String role, @Nullable @RequestParam("party") String party,
 			@Nullable @RequestParam("background") String background,
 			@Nullable @RequestParam("constituency") String constituency,
-			@Nullable @RequestParam("voterIdNumber") String voterIdNumber, 
-			@Nullable @RequestParam("age") Integer age,
-			@Nullable @RequestParam("gender") String gender,
-			@Nullable @RequestParam("symbol") MultipartFile symbol,
+			@Nullable @RequestParam("voterIdNumber") String voterIdNumber, @Nullable @RequestParam("age") Integer age,
+			@Nullable @RequestParam("gender") String gender, @Nullable @RequestParam("symbol") MultipartFile symbol,
 			@Nullable @RequestParam("imageOfCandidate") MultipartFile imageOfCandidate) {
 
 		return ResponseEntity.status(service.updateCandidates(id, email, phoneNumber, password, name, role, party,

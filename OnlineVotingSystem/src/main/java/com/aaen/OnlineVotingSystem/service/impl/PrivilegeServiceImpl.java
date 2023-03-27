@@ -51,8 +51,10 @@ public class PrivilegeServiceImpl implements PrivilegeService {
 	public List<PrivilegeRequestResponse> getPrivileges() {
 
 		List<PrivilegeRequestResponse> privileges = repository.findAll();
+
 		privileges.sort((PrivilegeRequestResponse p1, PrivilegeRequestResponse p2) -> p1.getPrivilege()
 				.compareTo(p2.getPrivilege()));
+
 		return privileges;
 	}
 
@@ -81,35 +83,23 @@ public class PrivilegeServiceImpl implements PrivilegeService {
 
 			PrivilegeRequestResponse dbPrivilege = getPrivilegeById(privilege.getId());
 
-			if (privilege.getPrivilege() != null) {
-
+			if (privilege.getPrivilege() != null)
 				dbPrivilege.setPrivilege(privilege.getPrivilege());
-			}
 
-			if (privilege.getActive() != null) {
-
+			if (privilege.getActive() != null)
 				dbPrivilege.setActive(privilege.getActive());
-			}
 
-			if (privilege.getAccessibleForUi() != null) {
-
+			if (privilege.getAccessibleForUi() != null)
 				dbPrivilege.setAccessibleForUi(privilege.getAccessibleForUi());
-			}
 
-			if (privilege.getDescription() != null) {
-
+			if (privilege.getDescription() != null)
 				dbPrivilege.setDescription(privilege.getDescription());
-			}
 
-			if (privilege.getParent() != null) {
-
+			if (privilege.getParent() != null)
 				dbPrivilege.setParent(privilege.getParent());
-			}
 
-			if (privilege.getAccessibleForUser() != null) {
-
+			if (privilege.getAccessibleForUser() != null)
 				dbPrivilege.setAccessibleForUser(privilege.getAccessibleForUser());
-			}
 
 			repository.save(dbPrivilege);
 

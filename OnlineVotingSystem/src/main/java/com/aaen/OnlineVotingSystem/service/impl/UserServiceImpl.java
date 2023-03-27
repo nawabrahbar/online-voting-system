@@ -66,22 +66,16 @@ public class UserServiceImpl implements UserService {
 
 					userRepository.save(user);
 
-				} else {
-
+				} else
 					throw new RecordNotFoundException(Constant.NOT_CREATED);
-				}
 
 				return Constant.CREATED;
 
-			} else {
-
+			} else
 				throw new RecordNotFoundException(Constant.EMAIL_ALREADY_EXISTS);
-			}
 
-		} else {
-
+		} else
 			throw new RecordNotFoundException(Constant.INVALID_EMAIL);
-		}
 	}
 
 	@Override
@@ -114,7 +108,6 @@ public class UserServiceImpl implements UserService {
 
 			return mongoTemplate.findOne(query, User.class);
 		}
-
 		return null;
 	}
 
@@ -147,6 +140,7 @@ public class UserServiceImpl implements UserService {
 	public String deleteUser(String id) {
 
 		boolean isFound = userRepository.existsById(id);
+
 		if (isFound == true) {
 			userRepository.deleteById(id);
 			return Constant.DELETED;
@@ -156,7 +150,9 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public String deleteAllUsers() {
+
 		userRepository.deleteAll();
+
 		return Constant.DELETED;
 	}
 
@@ -200,10 +196,8 @@ public class UserServiceImpl implements UserService {
 
 						updateUsers.setRole(role.getId());
 
-					} else {
-
+					} else
 						throw new RecordNotFoundException(Constant.USER_NOT_UPDATED_PROVIDE_ROLE);
-					}
 				}
 
 				if (user.getPermissions() != null) {
@@ -219,11 +213,8 @@ public class UserServiceImpl implements UserService {
 
 				throw new RecordNotFoundException(Constant.USER_NOT_UPDATED);
 			}
-		} else {
-
+		} else
 			throw new RecordNotFoundException(Constant.USER_UNAVAILABLE);
-		}
-
 	}
 
 	@Override
@@ -244,10 +235,8 @@ public class UserServiceImpl implements UserService {
 
 				return HttpStatus.NO_CONTENT;
 
-			} else {
-
+			} else
 				return HttpStatus.UNAUTHORIZED;
-			}
 		}
 		return HttpStatus.BAD_REQUEST;
 	}

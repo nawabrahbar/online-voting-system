@@ -18,6 +18,7 @@ public class BlacklistedJwtTokenController {
 	@DeleteMapping
 	@PreAuthorize("hasAuthority('admin') and hasAuthority('blacklisted.delete.all')")
 	public void deleteBlackListedToken() {
+
 		blacklistedJwtTokenService.deleteBlacklistedJwtToken();
 	}
 

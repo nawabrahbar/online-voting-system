@@ -10,6 +10,7 @@ public class UsernameNotFoundException extends AuthenticationException {
 	private static final long serialVersionUID = 1L;
 
 	public UsernameNotFoundException(String exception) {
+
 		super(exception);
 	}
 }

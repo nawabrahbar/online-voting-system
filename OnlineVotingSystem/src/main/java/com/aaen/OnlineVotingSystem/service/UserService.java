@@ -16,7 +16,7 @@ public interface UserService {
 	public String createUser(User user);
 
 	public User getUser(String id, String token);
-	
+
 	public List<User> getUsers(String token);
 
 	public String deleteUser(String id);
@@ -26,5 +26,4 @@ public interface UserService {
 	public String updateUser(User user);
 
 	public HttpStatus changePassword(PasswordReset passwordReset, String token);
-
 }

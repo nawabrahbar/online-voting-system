@@ -223,14 +223,11 @@ public class CandidateServiceImpl implements CandidateService {
 
 			Role role = roleService.getById(candidate.getRole());
 
-			if (role.getName().equals(Constant.CANDIDATE)) {
-
+			if (role.getName().equals(Constant.CANDIDATE))
 				user.setPermissions(candidatePermission);
 
-			} else if (role.getName().equals(Constant.VOTER)) {
-
+			else if (role.getName().equals(Constant.VOTER))
 				user.setPermissions(voterPermission);
-			}
 
 			userRepository.save(user);
 

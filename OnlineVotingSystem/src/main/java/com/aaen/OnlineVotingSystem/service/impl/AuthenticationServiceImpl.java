@@ -125,21 +125,16 @@ public class AuthenticationServiceImpl implements AuthenticationService, UserDet
 
 			return new org.springframework.security.core.userdetails.User(user.getId(), user.getPassword(),
 					authorities);
-		} else {
-
+		} else
 			throw new UsernameNotFoundException(Constant.USER_NOT_FOUND);
-		}
-
 	}
 
 	public User loadUserByEmail(String email) {
 
 		Optional<User> optional = userRepository.findByEmail(email);
 
-		if (optional.isPresent()) {
-
+		if (optional.isPresent())
 			return optional.get();
-		}
 
 		return null;
 	}

@@ -20,5 +20,4 @@ public interface BlacklistedJwtTokenService {
 	public String deleteBlacklistedJwtTokenById(String id);
 
 	public String deleteBlacklistedJwtToken();
-
 }
