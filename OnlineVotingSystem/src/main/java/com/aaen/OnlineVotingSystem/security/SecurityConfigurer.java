@@ -20,6 +20,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.aaen.OnlineVotingSystem.service.impl.AuthenticationServiceImpl;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @SuppressWarnings("deprecation")
 @Configuration
 @EnableWebSecurity

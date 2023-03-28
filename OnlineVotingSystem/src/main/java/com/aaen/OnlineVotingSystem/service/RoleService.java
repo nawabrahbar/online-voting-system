@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 
 import com.aaen.OnlineVotingSystem.model.Role;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Component
 @Qualifier(value = "RoleService")
 public interface RoleService {

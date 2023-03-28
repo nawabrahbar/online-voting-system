@@ -8,6 +8,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.Builder;
 import lombok.Data;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Builder
 @Data
 @Document(collection = "reservation")

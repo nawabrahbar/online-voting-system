@@ -9,6 +9,10 @@ import org.springframework.stereotype.Component;
 import com.aaen.OnlineVotingSystem.model.PasswordReset;
 import com.aaen.OnlineVotingSystem.model.User;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Component
 @Qualifier(value = "UserService")
 public interface UserService {

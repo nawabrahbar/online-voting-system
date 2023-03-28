@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 
 import com.aaen.OnlineVotingSystem.model.PrivilegeRequestResponse;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Component
 @Qualifier(value = "PrivilegeService")
 public interface PrivilegeService {

@@ -13,6 +13,10 @@ import com.aaen.OnlineVotingSystem.repository.PrivilegeRepository;
 import com.aaen.OnlineVotingSystem.service.PrivilegeService;
 import com.aaen.OnlineVotingSystem.util.Constant;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Service
 public class PrivilegeServiceImpl implements PrivilegeService {
 

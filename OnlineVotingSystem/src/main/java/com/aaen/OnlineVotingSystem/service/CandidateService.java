@@ -9,6 +9,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.aaen.OnlineVotingSystem.model.Candidate;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Component
 @Qualifier(value = "CandidateService")
 public interface CandidateService {

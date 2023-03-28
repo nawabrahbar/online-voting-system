@@ -18,6 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.aaen.OnlineVotingSystem.model.Role;
 import com.aaen.OnlineVotingSystem.service.RoleService;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @RestController
 @RequestMapping(path = { "/api/v1/roles" })
 public class RoleController {

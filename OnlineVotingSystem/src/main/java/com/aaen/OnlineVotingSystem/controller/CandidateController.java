@@ -20,6 +20,10 @@ import com.aaen.OnlineVotingSystem.model.Candidate;
 import com.aaen.OnlineVotingSystem.service.CandidateService;
 import com.mongodb.lang.Nullable;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @RestController
 @RequestMapping(path = { "/api/v1" })
 public class CandidateController {

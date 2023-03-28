@@ -9,6 +9,10 @@ import org.springframework.stereotype.Component;
 import com.aaen.OnlineVotingSystem.model.Vote;
 import com.aaen.OnlineVotingSystem.model.VoteCount;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Component
 @Qualifier(value = "VoteService")
 public interface VoteService {

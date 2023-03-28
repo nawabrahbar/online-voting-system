@@ -22,6 +22,10 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.aaen.OnlineVotingSystem.service.BlacklistedJwtTokenService;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
 

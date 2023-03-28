@@ -6,6 +6,10 @@ import org.springframework.lang.Nullable;
 
 import lombok.Data;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Data
 public class Permission {
 

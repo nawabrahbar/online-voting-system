@@ -21,6 +21,10 @@ import com.aaen.OnlineVotingSystem.model.PasswordReset;
 import com.aaen.OnlineVotingSystem.model.User;
 import com.aaen.OnlineVotingSystem.service.UserService;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @RestController
 @RequestMapping(path = { "/api/v1/users" })
 public class UserController {

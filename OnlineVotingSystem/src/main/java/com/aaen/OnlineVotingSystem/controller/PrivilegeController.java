@@ -20,6 +20,10 @@ import com.aaen.OnlineVotingSystem.exception.RecordNotFoundException;
 import com.aaen.OnlineVotingSystem.model.PrivilegeRequestResponse;
 import com.aaen.OnlineVotingSystem.service.PrivilegeService;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @RestController
 @RequestMapping(path = { "/api/v1/privilege" })
 public class PrivilegeController {

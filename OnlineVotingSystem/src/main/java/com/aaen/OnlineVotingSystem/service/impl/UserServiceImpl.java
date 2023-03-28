@@ -25,6 +25,10 @@ import com.aaen.OnlineVotingSystem.service.UserService;
 import com.aaen.OnlineVotingSystem.util.Constant;
 import com.aaen.OnlineVotingSystem.util.Validation;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Service
 public class UserServiceImpl implements UserService {
 

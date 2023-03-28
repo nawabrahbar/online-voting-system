@@ -18,6 +18,10 @@ import com.aaen.OnlineVotingSystem.exception.RecordNotFoundException;
 import com.aaen.OnlineVotingSystem.model.Authentication;
 import com.aaen.OnlineVotingSystem.service.AuthenticationService;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @RestController
 @RequestMapping(path = { "/api/v1" })
 public class AuthenticationController {

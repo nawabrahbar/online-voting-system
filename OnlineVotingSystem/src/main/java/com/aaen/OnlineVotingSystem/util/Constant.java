@@ -1,5 +1,9 @@
 package com.aaen.OnlineVotingSystem.util;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 public class Constant {
 
 	public static final String CREATED = "Created";

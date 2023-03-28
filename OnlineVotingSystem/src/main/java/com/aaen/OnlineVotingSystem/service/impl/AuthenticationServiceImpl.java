@@ -36,6 +36,10 @@ import com.aaen.OnlineVotingSystem.util.Constant;
 import com.aaen.OnlineVotingSystem.util.JsonResponseUtil;
 import com.mongodb.client.MongoDatabase;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService, UserDetailsService {
 

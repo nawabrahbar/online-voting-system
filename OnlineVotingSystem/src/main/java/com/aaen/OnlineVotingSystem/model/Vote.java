@@ -7,6 +7,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Data
 @Document(collection = "vote")
 public class Vote {

@@ -7,6 +7,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Builder
 @Getter
 @Setter

@@ -5,6 +5,10 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 public class DateTimeUtil {
 
 	public static Date convertToDate(LocalDateTime localDateTime) {

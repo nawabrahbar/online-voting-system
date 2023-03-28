@@ -11,6 +11,10 @@ import com.aaen.OnlineVotingSystem.repository.BlacklistedJwtTokenRepository;
 import com.aaen.OnlineVotingSystem.service.BlacklistedJwtTokenService;
 import com.aaen.OnlineVotingSystem.util.Constant;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Service
 public class BlacklistedJwtTokenServiceImpl implements BlacklistedJwtTokenService {
 

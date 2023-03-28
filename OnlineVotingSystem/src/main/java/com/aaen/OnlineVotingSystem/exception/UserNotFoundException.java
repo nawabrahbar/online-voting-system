@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.aaen.OnlineVotingSystem.util.Constant;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class UserNotFoundException extends RuntimeException {
 

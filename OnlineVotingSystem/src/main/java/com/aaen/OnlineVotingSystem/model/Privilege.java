@@ -5,6 +5,10 @@ import org.springframework.security.core.GrantedAuthority;
 
 import lombok.Data;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @SuppressWarnings("serial")
 @Data
 @Document(collection = "privilege")

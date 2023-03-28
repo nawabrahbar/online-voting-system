@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 import com.aaen.OnlineVotingSystem.exception.RecordNotFoundException;
 import com.aaen.OnlineVotingSystem.model.Authentication;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Component
 @Qualifier("AuthenticationService")
 public interface AuthenticationService {

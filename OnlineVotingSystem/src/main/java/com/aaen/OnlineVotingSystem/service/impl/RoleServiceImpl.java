@@ -13,6 +13,10 @@ import com.aaen.OnlineVotingSystem.model.Role;
 import com.aaen.OnlineVotingSystem.repository.RoleRepository;
 import com.aaen.OnlineVotingSystem.service.RoleService;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Service
 public class RoleServiceImpl implements RoleService {
 

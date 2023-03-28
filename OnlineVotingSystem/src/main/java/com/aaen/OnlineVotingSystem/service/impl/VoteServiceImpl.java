@@ -24,6 +24,10 @@ import com.aaen.OnlineVotingSystem.repository.VoteRepository;
 import com.aaen.OnlineVotingSystem.service.VoteService;
 import com.aaen.OnlineVotingSystem.util.Constant;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Service
 public class VoteServiceImpl implements VoteService {
 

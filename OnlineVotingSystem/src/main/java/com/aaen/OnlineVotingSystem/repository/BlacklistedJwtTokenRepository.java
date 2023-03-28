@@ -7,6 +7,10 @@ import org.springframework.stereotype.Repository;
 
 import com.aaen.OnlineVotingSystem.model.BlacklistedJwtToken;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Repository
 public interface BlacklistedJwtTokenRepository extends MongoRepository<BlacklistedJwtToken, String> {
 

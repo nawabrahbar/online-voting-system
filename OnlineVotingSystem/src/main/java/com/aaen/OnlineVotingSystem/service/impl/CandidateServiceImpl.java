@@ -26,6 +26,10 @@ import com.aaen.OnlineVotingSystem.service.CandidateService;
 import com.aaen.OnlineVotingSystem.service.RoleService;
 import com.aaen.OnlineVotingSystem.util.Constant;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Service
 public class CandidateServiceImpl implements CandidateService {
 

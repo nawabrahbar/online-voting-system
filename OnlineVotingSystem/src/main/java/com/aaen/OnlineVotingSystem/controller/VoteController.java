@@ -17,6 +17,10 @@ import com.aaen.OnlineVotingSystem.model.Vote;
 import com.aaen.OnlineVotingSystem.security.JwtUtil;
 import com.aaen.OnlineVotingSystem.service.VoteService;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @RestController
 @RequestMapping(path = { "/api/v1/votes" })
 public class VoteController {

@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 
 import com.aaen.OnlineVotingSystem.model.BlacklistedJwtToken;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Component
 @Qualifier("BlacklistedJwtTokenService")
 public interface BlacklistedJwtTokenService {

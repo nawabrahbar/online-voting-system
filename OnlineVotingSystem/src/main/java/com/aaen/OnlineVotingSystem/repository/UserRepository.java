@@ -7,6 +7,10 @@ import org.springframework.stereotype.Repository;
 
 import com.aaen.OnlineVotingSystem.model.User;
 
+/**
+ * @author Mohammad Enayatullah
+ *
+ */
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {
 
