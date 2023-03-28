@@ -2,6 +2,8 @@
 
 Online Voting System is a Spring Boot-based application that allows users to cast their votes online for various elections and surveys. The application is designed to be easy to use, secure, and customizable to fit the needs of various organizations.
 
+[![Coverage Status]](https://github.com/nawabrahbar/online-voting-system)
+
 ## Key Features
 
 - RESTful API for voting and surveying
